@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h3.tag-title
+    a(href=tagUrl(tag)) Posts tagged: #{tag}
+  - each post in posts
+    include includes/postSnippet

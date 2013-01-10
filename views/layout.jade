@@ -1,0 +1,61 @@
+!!!
+html
+	head
+		title= 'IRCAnywhere Blog'
+		meta(charset='utf-8')
+		link(rel='stylesheet', href='/css/bootstrap.css')
+
+		script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+		script
+			$(document).ready(function() {
+				if ($('div#home-content').height() < ($(document).height() - $('div.topbar').height()))
+					$('div#home-content').height($(document).height() - $('div.topbar').height());
+				// resize the content div
+			});
+	body
+		.topbar.navbar-fixed-top
+			.topbar-inner
+				.container-fluid
+					a.brand(href='/') IRCAnywhere Blog
+					ul.nav
+						li
+							a(href='/') Home
+					ul.nav.secondary-nav
+						li
+							a(href='https://twitter.com/ircanywhere') @ircanywhere
+						li
+							a(href='https://ircanywhere.com') IRCAnywhere.com
+		.wrap
+			.container-fluid.clearfix
+				.sidebar
+				.content-holder
+					#inner-content
+						#home-content
+							.row.clearfix
+								.left
+									block content
+								.right
+									.sidebar-nav
+										.well.clearfix
+											ul.nav.nav-list
+												li.nav-header categories
+												- each cat in categoryList
+													li
+														a(href=categoryUrl(cat)) #{cat}
+												li.nav-header tags
+												- each tag in tagList
+													li
+														a(href=tagUrl(tag)) #{tag}
+									.sidebar-nav
+										.well.clearfix
+											ul.nav.nav-list-posts
+												li.nav-header recent posts
+												- each post in postList
+													li
+														a(href=post.url) #{post.title}
+									#footer
+										div
+											&copy; IRCAnywhere 2012 &middot; 
+											a(href='https://ircanywhere.com/#?/about') About 
+											&middot; 
+											a(href='https://ircanywhere.com/#?/contact') Contact

@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h3.cat-title
+    a(href=categoryUrl(category)) Posts in category: #{category}
+  - each post in posts
+    include includes/postSnippet
