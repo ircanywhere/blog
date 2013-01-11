@@ -4,13 +4,17 @@ html
 		title= 'IRCAnywhere Blog'
 		meta(charset='utf-8')
 		link(rel='stylesheet', href='/css/bootstrap.css')
+		link(rel='stylesheet', href='/css/github.css')
 
 		script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+		script(type='text/javascript', src='/js/highlight.pack.js')
 		script
 			$(document).ready(function() {
 				if ($('div#home-content').height() < ($(document).height() - $('div.topbar').height()))
 					$('div#home-content').height($(document).height() - $('div.topbar').height());
 				// resize the content div
+
+				hljs.initHighlightingOnLoad();
 			});
 	body
 		.topbar.navbar-fixed-top

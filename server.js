@@ -1,7 +1,7 @@
 var
   express = require('express'),
   app     = express(),
-  poet    = require('poet')( app );
+  poet    = require('./lib/poet')( app );
 
 poet.set({
 	posts: '_posts',
