@@ -1814,6 +1814,11 @@ div.post.content
     content: "... ";
 }
 
+.post.content p:last-child a:hover
+{
+    text-decoration: none;
+}
+
 div.post .tags
 {
     padding: 5px 10px 15px 10px;

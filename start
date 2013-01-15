@@ -1,2 +1,2 @@
 #!/bin/sh
-PORT=3000 node .
+PORT=1337 node .
