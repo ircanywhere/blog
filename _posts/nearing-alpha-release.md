@@ -16,4 +16,4 @@ If you're interested in getting your foot in the door and making sure you get an
 
 ***
 
-<script src="https://gist.github.com/n0valyfe/4615162.js"></script>
+<script src="https://gist.github.com/rickihastings/4615162.js"></script>
